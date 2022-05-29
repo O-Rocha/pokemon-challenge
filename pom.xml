@@ -9,9 +9,9 @@
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>br.com.portifolio.looqbox.pokemon</groupId>
+    <groupId>br.com.portifolio.challenges</groupId>
     <artifactId>pokemon-challenge</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.0</version>
     <name>pokemon-challenge</name>
     <description>Demo project for Spring Boot</description>
 
@@ -20,6 +20,12 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
@@ -37,6 +43,14 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.3</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
@@ -51,13 +65,13 @@
                 <artifactId>maven-pmd-plugin</artifactId>
                 <version>3.16.0</version>
                 <executions>
-                  <execution>
-                    <goals>
-                      <goal>check</goal>
-                    </goals>
-                  </execution>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
                 </executions>
-              </plugin>
+            </plugin>
         </plugins>
     </build>
 </project>
